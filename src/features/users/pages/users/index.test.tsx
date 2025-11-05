@@ -72,42 +72,4 @@ describe.only("UsersPage", () => {
     expect(screen.getByLabelText("Select nationality")).toHaveValue("us");
     expect(screen.getByText("Page 3")).toBeInTheDocument();
   });
-
-  // it("increments page via pagination controls", async () => {
-  //   const user = userEvent.setup();
-
-  //   render(
-  //     <MemoryRouter initialEntries={["/users?nat=gb&page=1"]}>
-  //       <UsersPage />
-  //     </MemoryRouter>
-  //   );
-
-  //   await user.click(screen.getByRole("button", { name: "Next" }));
-
-  //   const lastCall = mockUseUsersSummary.mock.calls.at(-1);
-  //   expect(lastCall?.[0]).toBe("gb");
-  //   expect(lastCall?.[1]).toBe(2);
-  //   expect(screen.getByText("Page 2")).toBeInTheDocument();
-  // });
-
-  // it("resets page when nationality changes", async () => {
-  //   const user = userEvent.setup();
-
-  //   render(
-  //     <MemoryRouter initialEntries={["/users?nat=fr&page=4"]}>
-  //       <UsersPage />
-  //     </MemoryRouter>
-  //   );
-
-  //   const select = screen.getByRole("combobox", { name: /nationality/i });
-  //   const germany = screen.getByRole("option", { name: "Germany" });
-
-  //   await user.selectOptions(select, germany);
-
-  //   await waitFor(() => {
-  //     expect(mockUseUsersSummary).toHaveBeenLastCalledWith("de", 1);
-  //   });
-
-  //   expect(screen.getByText("Page 1")).toBeInTheDocument();
-  // });
 });

@@ -65,3 +65,8 @@ td {
   border-radius: 0.25rem;
   cursor: pointer;
 }
+.nextBtn:disabled,
+.prevBtn:disabled {
+  background-color: #666;
+  cursor: not-allowed;
+}
